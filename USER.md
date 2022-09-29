@@ -7,7 +7,7 @@ The following SQL statements and expressions are supported by the SQLite3 librar
 Type              | Statements
 ----------------- | ----------
 Connections       | [ATTACH](http://www.sqlite.org/lang_attach.html)<br>[DETACH](http://www.sqlite.org/lang_detach.html)
-[Transactions](http://www.sqlite.org/lang_transaction.html)|BEGIN<br>COMMIT<br>ROLLBACK                               
+[Transactions](http://www.sqlite.org/lang_transaction.html)|BEGIN<br>COMMIT<br>ROLLBACK
 Data Definition   | [ALTER](http://www.sqlite.org/lang_altertable.html)<br>CREATE [INDEX](http://www.sqlite.org/lang_createindex.html) [TABLE](http://www.sqlite.org/lang_createtable.html) [TRIGGER](http://www.sqlite.org/lang_createtrigger.html) [VIEW](http://www.sqlite.org/lang_createview.html)<br>DROP [INDEX](http://www.sqlite.org/lang_dropindex.html) [TABLE](http://www.sqlite.org/lang_droptable.html) [TRIGGER](http://www.sqlite.org/lang_droptrigger.html) [VIEW](http://www.sqlite.org/lang_dropview.html)
 Data Maintenance  | [ANALYZE](http://www.sqlite.org/lang_analyze.html)<br>[REINDEX](http://www.sqlite.org/lang_reindex.html)<br>[VACUUM](http://www.sqlite.org/lang_vacuum.html)
 Data Manipulation | [DELETE](http://www.sqlite.org/lang_delete.html)<br>[EXPLAIN](http://www.sqlite.org/lang_explain.html)<br>[INSERT](http://www.sqlite.org/lang_insert.html)<br>[SELECT](http://www.sqlite.org/lang_select.html)<br>[UPDATE](http://www.sqlite.org/lang_update.html)<br>[expressions](http://www.sqlite.org/lang_expr.html)
@@ -138,46 +138,46 @@ Performs an inegrity check looking for out-of-order records, missing pages, malf
 
 By default this function returns a flat block (see the `/flat` refinement of `CONNECT`) consisting of the following six values per column, in ascending column number order.
 
-Column     | Type    | Description     
+Column     | Type    | Description
 ---------- | ------- | ----------------
-cid        | integer | Column ID       
-name       | string  | Column name     
-type       | string  | Column type     
-notnull    | integer | Not null flag   
-dflt_value | any     | Default value   
+cid        | integer | Column ID
+name       | string  | Column name
+type       | string  | Column type
+notnull    | integer | Not null flag
+dflt_value | any     | Default value
 pk         | integer | Primary key flag
 
 #### Index
 
 This refinement instead returns information about a specific index.
 
-Column     | Type    | Description     
+Column     | Type    | Description
 ---------- | ------- | ----------------
-seqno      | integer | Sequence number 
-cid        | integer | Column ID       
-name       | string  | Column name     
+seqno      | integer | Sequence number
+cid        | integer | Column ID
+name       | string  | Column name
 
 #### Indexes
 
 This refinement returns information about the indexes on a table.
 
-Column     | Type    | Description     
+Column     | Type    | Description
 ---------- | ------- | ----------------
-seq        | integer | Sequence        
-name       | string  | Index name      
-unique     | integer | Unique flag     
+seq        | integer | Sequence
+name       | string  | Index name
+unique     | integer | Unique flag
 
 #### Fkeys
 
 This refinement returns information about the foreign keys (if any) that reference a table.
 
-Column     | Type    | Description     
+Column     | Type    | Description
 ---------- | ------- | ----------------
 id         | integer | The index of the foreign key in the list of foreign keys for the table - 0-based
-seq        | integer | The index of the column referenced in the foreign key - 0-based                 
-table      | string  | The name of the referenced table                                                
-from       | string  | The column name in the local table                                              
-to         | string  | The column name in the referenced table                                         
+seq        | integer | The index of the column referenced in the foreign key - 0-based
+table      | string  | The name of the referenced table
+from       | string  | The column name in the local table
+to         | string  | The column name in the referenced table
 
 ### DISCONNECT
 
@@ -192,7 +192,7 @@ This function closes the current database file using the /Database Identifier/ s
 ### EXPLAIN
 
 	USAGE:
-		EXPLAIN statement 
+		EXPLAIN statement
 
 	DESCRIPTION:
 		Explain an SQL statement.
@@ -204,7 +204,7 @@ This function closes the current database file using the /Database Identifier/ s
 ### EXPORT
 
 	USAGE:
-		EXPORT file statement 
+		EXPORT file statement
 
 	DESCRIPTION:
 		Export result table to a CSV file.
@@ -219,7 +219,7 @@ This function exports the result table to the specified file.
 ### IMPORT
 
 	USAGE:
-		IMPORT file /no-header 
+		IMPORT file /no-header
 
 	DESCRIPTION:
 		Import CSV file into a table.
@@ -243,11 +243,11 @@ This function imports a CSV file into a table with the same name as the file (le
 
 This function returns three values for each index.
 
-Column     | Type    | Description     
+Column     | Type    | Description
 ---------- | ------- | ----------------
-tbl_name   | string  | Table name      
-name       | string  | Index name      
-sql        | string  | Create syntax   
+tbl_name   | string  | Table name
+name       | string  | Index name
+sql        | string  | Create syntax
 
 ### ROWS
 
@@ -294,7 +294,7 @@ This refinement forces the current statement to be processed as if the `/direct`
 
 This function returns two values for each table.
 
-Column     | Type   | Description      
+Column     | Type   | Description
 ---------- | ------ | -----------------
-tbl_name   | string | Table name       
+tbl_name   | string | Table name
 sql        | string | SQL create syntax
