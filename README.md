@@ -30,7 +30,7 @@ The SQLite driver provides a simplified wrapper to the SQLite library. Its featu
 
 ## Documentation
 
-> 16-Oct-2011
+> 20-Aug-2012
 
  - **DRIVER.md** - describes the design and operation of the SQLite Driver.
  - **USER.md** - describes the use of SQL & the DB access functions.
