@@ -22,15 +22,15 @@ For detailed information on SQLite, visit their [home page](http://www.sqlite.or
 
 The SQLite driver provides a simplified wrapper to the SQLite library. Its features include:
 
- - **Works out of the box** - Just add `do %sqlite.r` to your script and you're ready to go.
- - **Native Rebol storage** - Your data is stored and accessed as Rebol values which means that you have the full range of Rebol data-types at your fingertips!
- - **Plays well** - The half-dozen functions that drive the database behave like any other Rebol function, accepting and returning Rebol values as you would expect.
- - **Lock detection** - The driver detects locks and initiates retries on your behalf.
- - **Configurable** - Many aspects of the driver's behaviour can be changed/controlled by specifying various refinements when you "connect" to a SQLite database.
+- **Works out of the box** - Just add `do %sqlite.r` to your script and you're ready to go.
+- **Native Rebol storage** - Your data is stored and accessed as Rebol values which means that you have the full range of Rebol data-types at your fingertips!
+- **Plays well** - The half-dozen functions that drive the database behave like any other Rebol function, accepting and returning Rebol values as you would expect.
+- **Lock detection** - The driver detects locks and initiates retries on your behalf.
+- **Configurable** - Many aspects of the driver's behaviour can be changed/controlled by specifying various refinements when you "connect" to a SQLite database.
 
 ## Documentation
 
-> 20-Aug-2012
+> 12-Aug-2012
 
- - **DRIVER.md** - describes the design and operation of the SQLite Driver.
- - **USER.md** - describes the use of SQL & the DB access functions.
+- [Driver Guide](DRIVER.md) - Describes the design and operation of the SQLite Driver.
+- [User Guide](USER.md) - Describes the use of SQL & the DB access functions.
