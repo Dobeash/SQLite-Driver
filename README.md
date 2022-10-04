@@ -1,4 +1,6 @@
-# SQLite Driver
+# SQLite Driver - 2.1.1
+
+> 12-Aug-2012
 
 **This driver only works with Rebol2.**
 
